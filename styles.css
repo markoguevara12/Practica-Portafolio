@@ -1,0 +1,110 @@
+
+body {
+    background-color: #0d0d0d;
+    color: #33ff33; 
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh; 
+    overflow-y: auto; 
+    margin: 0; 
+}
+
+body, .monitor-overlay {
+    overflow: hidden; 
+}
+
+
+body::-webkit-scrollbar, .monitor-overlay::-webkit-scrollbar {
+    width: 0px; 
+    height: 0px; 
+}
+
+body {
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+.monitor-overlay {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    border: 5px solid #33ff33;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 100vh; 
+}
+
+.hero-title, .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #33ff33;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle, .hero-description {
+    color: #aaffaa;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+.habilidades, .proyectos, .contacto {
+    border-top: 2px solid #33ff33;
+    padding-top: 40px;
+}
+
+.habilidad {
+    font-size: 1.2rem;
+    color: #33ff33;
+    margin: 10px 0;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #111;
+    border: 1px solid #33ff33;
+    color: #33ff33;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #33ff33;
+    color: #0d0d0d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #aaffaa;
+}
